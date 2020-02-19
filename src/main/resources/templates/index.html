@@ -9,6 +9,22 @@
 </head>
 <body>
 <h1>Pick a planet:</h1>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+              <tr>
+                  <th scope="col">Planet Name</th>
+                  <th scope="col">Year in Earth Days</th>
+                  <th scope="col">Type of Planet</th>
+              </tr>
+        </thead>
+        <tbody>
+            <tr th:each="planet : ${planets}">
+                <td th:text="${planet.getDisplayPlanet()}"></td>
+                <td th:text="${planet.getYearLength()}"></td>
+                <td th:text="${planet.getPlanetType()}"></td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
